@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CsfUiLibComponent } from './csf-ui-lib.component';
+import { CsfInputFaComponent } from './csf-input-fa.component';
 
-describe('CsfUiLibComponent', () => {
-  let component: CsfUiLibComponent;
-  let fixture: ComponentFixture<CsfUiLibComponent>;
+describe('CsfInputFaComponent', () => {
+  let component: CsfInputFaComponent;
+  let fixture: ComponentFixture<CsfInputFaComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CsfUiLibComponent ]
+      declarations: [ CsfInputFaComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CsfUiLibComponent);
+    fixture = TestBed.createComponent(CsfInputFaComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
-import { CsfUiLibComponent } from './csf-ui-lib.component';
+import { CsfInputFaComponent } from './csf-input-fa/csf-input-fa.component';
 
 @NgModule({
   imports: [
   ],
-  declarations: [CsfUiLibComponent],
-  exports: [CsfUiLibComponent]
+  declarations: [CsfInputFaComponent],
+  exports: [CsfInputFaComponent]
 })
 export class CsfUiLibModule { }
