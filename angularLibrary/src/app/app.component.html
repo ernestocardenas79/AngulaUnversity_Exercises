@@ -16,7 +16,7 @@
 </header>
 
 <body>
-  <div class="container">
+  <div class="container csf-input-fa-red-theme" >
     <h1>Font Awesome</h1>
 
     <div class="form">
@@ -28,22 +28,30 @@
 
       <div class="form-row">
         <label>Email:</label>
-        <input class="normal-input" type="email" name="email" placeholder="E-mail">
+        <csf-input-fa icon="envelope">
+          <input class="normal-input" type="email" name="email" placeholder="E-mail">
+        </csf-input-fa>
       </div>
 
       <div class="form-row">
         <label>Password:</label>
-        <input class="normal-input" type="email" name="email" placeholder="Password">
+        <csf-input-fa icon="lock">
+          <input class="normal-input" type="email" name="email" placeholder="Password">
+        </csf-input-fa>
       </div>
 
       <div class="form-row">
         <label>Stripe:</label>
+        <csf-input-fa icon="cc-stripe">
         <input class="normal-input" type="email" name="email" placeholder="Stripe">
+      </csf-input-fa>
       </div>
 
       <div class="form-row">
         <label>Paypal:</label>
+        <csf-input-fa icon="paypal">
         <input class="normal-input" type="email" name="email" placeholder="Paypal">
+      </csf-input-fa>
       </div>
     </div>
 
