@@ -1,7 +1,7 @@
 import { Directive, HostListener } from '@angular/core';
 
 @Directive({
-  selector: '[csf-input-fa input]'
+  selector: '[csf-input-fa input], [csf-input-md input]'
 })
 export class CsfInputDirective {
 
