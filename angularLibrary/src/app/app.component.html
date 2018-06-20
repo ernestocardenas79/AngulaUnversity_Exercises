@@ -28,29 +28,29 @@
 
       <div class="form-row">
         <label>Email:</label>
-        <csf-input-fa icon="envelope">
-          <input class="normal-input" type="email" name="email" placeholder="E-mail">
+        <csf-input-fa icon="envelope" id="email-field">
+          <input class="normal-input" type="email" name="email" placeholder="E-mail" autocomplete="off" class="test-class">
         </csf-input-fa>
       </div>
 
       <div class="form-row">
         <label>Password:</label>
-        <csf-input-fa icon="lock">
-          <input class="normal-input" type="email" name="email" placeholder="Password">
-        </csf-input-fa>
+        <csf-input-fa icon="lock" id="password-field">
+          <input class="normal-input" type="password" name="password" placeholder="Password"  class="test-class">
+        </csf-input-fa> 
       </div>
 
-      <div class="form-row">
+      <div class="form-row stripe-field">
         <label>Stripe:</label>
         <csf-input-fa icon="cc-stripe">
-        <input class="normal-input" type="email" name="email" placeholder="Stripe">
+        <input class="normal-input" type="email" name="stripe" placeholder="Stripe">
       </csf-input-fa>
       </div>
 
       <div class="form-row">
         <label>Paypal:</label>
         <csf-input-fa icon="paypal">
-        <input class="normal-input" type="email" name="email" placeholder="Paypal">
+        <input class="normal-input" type="email" name="paypal" placeholder="Paypal">
       </csf-input-fa>
       </div>
     </div>
