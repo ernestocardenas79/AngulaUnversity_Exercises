@@ -1,5 +1,4 @@
-@import "./theme";
-
+@import "./theme.scss";
 
 .tab-panel {
   box-shadow: $box-shadow;
@@ -33,12 +32,5 @@
       }
     }
   }
-  
 
-  .tab {
-    border-left: $tab-border;
-    border-right: $tab-border;
-    border-bottom: $tab-border;
-    padding: 15px 25px;
-  }
 }
