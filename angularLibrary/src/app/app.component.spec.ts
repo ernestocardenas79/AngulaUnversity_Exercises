@@ -1,21 +1,21 @@
 import { TestBed, async, ComponentFixture } from '@angular/core/testing';
 import { AppComponent } from './app.component';
-import { CsfInputFaComponent, CsfInputDirective } from 'projects/csf-ui-lib';
 import { DebugElement } from '@angular/core';
 import { By } from '@angular/platform-browser';
 import { by } from 'protractor';
+import { CsfTabComponent, CsfTabPanelComponent } from 'projects/csf-ui-lib';
 
 describe('AppComponent', () => {
   let component: AppComponent,
       fixture: ComponentFixture<AppComponent>,
       el: DebugElement,
-      emailField: DebugElement;
+      tabPanel: DebugElement;
 
   
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-        AppComponent, CsfInputFaComponent, CsfInputDirective
+        AppComponent, CsfTabComponent, CsfTabPanelComponent
       ],
     }).compileComponents();
   }));
@@ -24,7 +24,7 @@ describe('AppComponent', () => {
     fixture = TestBed.createComponent(AppComponent);
     component = fixture.debugElement.componentInstance;
     el = fixture.debugElement;
-    emailField = el.query(By.css('#email-field'));
+    tabPanel = el.query(By.css('#tab-panel'));
 
     fixture.detectChanges();
     
@@ -34,20 +34,49 @@ describe('AppComponent', () => {
     expect(component).toBeTruthy();
   }));
 
-  it('should create a font awesome emial input', async(() => {
-    expect(emailField).toBeTruthy();
+  it('should find only one tab inside the tab container', async(() => {
+    const tabs = tabPanel.queryAll(By.css('.tab'));
+
+    expect(tabs).toBeTruthy();
+    expect(tabs.length).toBe(1);
   }));
 
-  it('should include the correct emial icon inside the email input', async(() => {
-    console.log(emailField.nativeElement.outerHTML);
+  it('should find only one tab inside the tab container', async(() => {
+    const selectedButton = tabPanel.query(
+        By.css('.tab-panel-buttons li.selected')).nativeElement;
 
-
-
-    expect(emailField.query(By.css('i.icon.fa.fa-envelope'))).toBeTruthy();
+    expect(selectedButton).toBeTruthy();
+    expect(selectedButton.textContent).toBe("Contact");
   }));
 
-  it('should have projected the correct test input inside the email input', async(() => {
-    expect(emailField.query(By.css('input.test-class'))).toBeTruthy();
+  it('should display the contacts tab', async(() => {
+    const contactEmail = tabPanel.query(By.css('.contact-email'));
+
+    expect(contactEmail).toBeTruthy();
   }));
-  
+
+  it('should display the contacts tab', async(() => {
+    const contactEmail = tabPanel.query(By.css('.contact-email'));
+
+    expect(contactEmail).toBeTruthy();
+  }));
+
+  it('should switch to the Login Tab', async(() => {
+    const tabButtons = tabPanel.queryAll(By.css('.tab-panel-buttons li'));
+
+    tabButtons[0].nativeElement.click();
+
+    fixture.detectChanges();
+
+    const loginEmail = tabPanel.query(By.css('.login-email'));
+    expect(loginEmail).toBeTruthy();
+
+      const selectedButton = tabPanel.query(
+        By.css('.tab-panel-buttons li.selected')).nativeElement;
+
+    expect(selectedButton).toBeTruthy();
+    expect(selectedButton.textContent).toBe('Login');
+
+  }));
+
 });
