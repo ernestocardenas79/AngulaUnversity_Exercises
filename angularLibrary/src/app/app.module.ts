@@ -5,12 +5,14 @@ import { AppComponent } from './app.component';
 import { CsfUiLibModule } from 'projects/csf-ui-lib';
 import { CaptureComponent } from './capture/capture.component';
 import { PanelComponent } from './panel/panel.component';
+import { ModalComponent } from './modal/modal.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CaptureComponent,
-    PanelComponent
+    PanelComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
