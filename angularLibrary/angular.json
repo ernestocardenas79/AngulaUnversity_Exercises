@@ -126,7 +126,7 @@
       "root": "projects/csf-ui-lib",
       "sourceRoot": "projects/csf-ui-lib/src",
       "projectType": "library",
-      "prefix": "csf",
+      "prefix": "",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",

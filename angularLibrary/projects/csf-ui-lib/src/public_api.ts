@@ -8,5 +8,6 @@ export * from  './lib/common/csf-input.directive';
 export * from  './lib/csf-tab-panel/csf-tab-panel.component';
 export * from  './lib/csf-tab/csf-tab.component';
 export * from  './lib/modal/modal.component';
+export * from  './lib/csf-modal-on-click.directive';
 
 export * from './lib/csf-ui-lib.module';

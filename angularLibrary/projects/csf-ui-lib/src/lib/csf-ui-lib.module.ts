@@ -6,6 +6,7 @@ import { CsfInputMdComponent } from './csf-input-md/csf-input-md.component';
 import { CsfTabPanelComponent } from './csf-tab-panel/csf-tab-panel.component';
 import { CsfTabComponent } from './csf-tab/csf-tab.component';
 import { ModalComponent } from './modal/modal.component';
+import { CsfModalOnClickDirective } from './csf-modal-on-click.directive';
 
 @NgModule({
   imports: [
@@ -16,12 +17,13 @@ import { ModalComponent } from './modal/modal.component';
                  CsfInputMdComponent, 
                  CsfTabPanelComponent, 
                  CsfTabComponent, 
-                 ModalComponent],
+                 ModalComponent, CsfModalOnClickDirective],
   exports: [CsfInputFaComponent, 
           CsfInputDirective,
           CsfInputMdComponent, 
           CsfTabPanelComponent, 
           CsfTabComponent,
-          ModalComponent]
+          ModalComponent,
+          CsfModalOnClickDirective]
 })
 export class CsfUiLibModule { }

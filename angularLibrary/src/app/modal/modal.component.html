@@ -1,5 +1,41 @@
+
 <div class="container">
   <h1>Modal Examples</h1>
+  
+  <ng-template #csfModalBody>
+
+    <csf-tab-panel id="tab-panel" #tabPanel>
+        <csf-tab title="Login" #loginTab>
+            <form>
+                <div class="form-field">
+                    <label>Email:</label><input class="login-email">
+                </div>
+                <div class="form-field">
+                    <label>Password:</label><input>
+                </div>
+            </form>
+        </csf-tab>
+
+        <csf-tab title="Sign Up" #signUpTab>
+            <form>
+                <div class="form-field">
+                    <label>Email:</label><input>
+                </div>
+                <div class="form-field">
+                    <label>Password:</label><input>
+                </div>
+                <div class="form-field">
+                    <label>Confirm Password:</label><input>
+                </div>
+            </form>
+        </csf-tab>
+    </csf-tab-panel>
+  </ng-template>
+
+  <csf-modal class="auth-modal" [body]="csfModalBody">
+
+  </csf-modal>
+  
   <div class="modal-buttons">
     <button #loginButton>Login</button>
     <button #signUpButton>Sign Up</button>
